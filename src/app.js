@@ -30,6 +30,7 @@ const interviewRouter = require("./routes/interview.routes");
 // using all the routes here
 app.use("/api/auth", authRouter);
 app.use("/api/interview", interviewRouter);
+app.use("/api/test", testRouter);
 
 // Multer / file upload error handler
 app.use((err, req, res, next) => {
