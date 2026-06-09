@@ -36,4 +36,5 @@ jobs:
     - run: npm -v    
     - run: npm ci
     - run: npm run build --if-present
-    - run: sudo pm2 restart backend
+    - run: sudo pm2 delete backend || true
+    - run: sudo pm2 start npm --name backend -- start || sudo pm2 restart backend
